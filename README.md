@@ -1,7 +1,7 @@
 # 🧠 EEG + Machine Learning Portfolio Project  
 
 This project combines **neuroscience** and **machine learning** by decoding EEG signals to classify simple mental states.  
-The pipeline is designed to be **educational, reproducible, and visually appealing** – perfect for a portfolio showcase.  
+The pipeline is designed to be educational and reproducible
 
 ---
 
@@ -16,7 +16,6 @@ The pipeline is designed to be **educational, reproducible, and visually appeali
 
 ## 📂 Repository Structure  
 eeg-ml-project/  
-├─ notebooks/ # Jupyter notebooks for exploration  
 ├─ src/ # Python modules for preprocessing & visualization  
 ├─ reports/figures/ # Saved plots and figures  
 ├─ models/ # Trained ML models  
@@ -56,10 +55,6 @@ The project produces a variety of figures stored in `reports/figures/`, includin
 - Spectrograms and topomaps  
 - Confusion matrix  
 - ROC curves and learning curves  
-
-Example (placeholder):  
-
-![Confusion Matrix](reports/figures/confusion_matrix.png)  
 
 ---
 
