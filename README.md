@@ -1,66 +1,39 @@
-# 🧠 EEG + Machine Learning Portfolio Project  
+# 🧠 Colorization with UNet
 
-This project combines **neuroscience** and **machine learning** by decoding EEG signals to classify simple mental states.  
-The pipeline is designed to be educational and reproducible
-
----
-
-## 📌 Project Goals
-- Explore real EEG data (open datasets, e.g., PhysioNet).
-- Preprocess signals (filtering, ICA, epoching).
-- Extract meaningful features (bandpower, CSP).
-- Train and evaluate ML models (LDA, SVM, etc.).
-- Generate **clear visualizations** for each stage.
-
----
-
-## 📂 Repository Structure  
-eeg-ml-project/  
-├─ src/ # Python modules for preprocessing & visualization  
-├─ reports/figures/ # Saved plots and figures  
-├─ models/ # Trained ML models  
-├─ data/ # EEG datasets (ignored in git)  
-├─ requirements.txt  
-├─ README.md  
-└─ LICENSE  
+This project implements a **deep learning model for automatic colorization of black-and-white images** using a **UNet-based architecture**. It leverages a dataset of paired color and grayscale images (from Kaggle) to learn how to predict color information from grayscale inputs.
 
 
 ---
 
-## 🔬 Methods
-1. **Exploratory Data Analysis (EDA)**  
-   - Raw EEG signals  
-   - Power Spectral Density (PSD)  
-   - Spectrograms and topographic maps  
+## Features
 
-2. **Preprocessing**  
-   - Bandpass filtering (1–40 Hz)  
-   - Artifact removal (ICA)  
-   - Epoch segmentation  
+- Convert black-and-white images to color.
+- UNet architecture for high-quality colorization.
+- Training pipeline with PyTorch.
+- Inference script to colorize images from any directory.
+- Save checkpoints and sample outputs during training.
 
-3. **Feature Engineering**  
-   - Bandpower in delta, theta, alpha, beta, gamma ranges  
-   - Common Spatial Patterns (CSP)  
+## Dataset
 
-4. **Machine Learning**  
-   - Baselines: LDA, SVM  
-   - Metrics: Accuracy, ROC/AUC, Confusion Matrix  
+The project expects a dataset structured as follows:
+data/  
+├── train_color/  
+├── train_black/  
+├── test_color/  
+├── test_black/  
 
----
+Images should be `.jpg`, `.jpeg`, or `.png`. The dataset used can be downloaded from [Kaggle](https://www.kaggle.com/).
 
-## 📊 Visual Outputs
-The project produces a variety of figures stored in `reports/figures/`, including:
-- Raw vs. filtered EEG signals  
-- PSD plots across frequency bands  
-- Spectrograms and topomaps  
-- Confusion matrix  
-- ROC curves and learning curves  
 
----
+## Project Structure
 
-## 🚀 Getting Started
-Clone the repository and install dependencies:
-```bash
-git clone https://github.com/yourusername/eeg-ml-project.git
-cd eeg-ml-project
-pip install -r requirements.txt
+src/  
+├── data.py       # dataset loader  
+├── model.py      # UNet model definition  
+├── utils.py      # helperss   
+train.py          # training   
+infer.py          # inference   
+checkpoints/      # saved models  
+samples/          # output   
+
+##  Example Output
