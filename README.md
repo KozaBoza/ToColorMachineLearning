@@ -1,4 +1,4 @@
-# 🧠 Colorization with UNet
+#🌈 Colorization with UNet
 
 This project implements a **deep learning model for automatic colorization of black-and-white images** using a **UNet-based architecture**. It leverages a dataset of paired color and grayscale images (from Kaggle) to learn how to predict color information from grayscale inputs.
 
