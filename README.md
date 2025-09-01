@@ -36,4 +36,3 @@ infer.py          # inference
 checkpoints/      # saved models  
 samples/          # output   
 
-##  Example Output
